@@ -15,3 +15,5 @@ search_box.send_keys('ChromeDriver')		# 키워드를 입력하고
 search_box.submit()				# 실행합니다.
 time.sleep(2)					# 2초간 동작하는 걸 봅시다
 driver.quit()					# 다 했으면 꺼야지
+
+#pycharm 자동 insert 어떻게 끄는지 check ?
