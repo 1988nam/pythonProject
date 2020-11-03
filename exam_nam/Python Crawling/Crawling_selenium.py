@@ -2,6 +2,7 @@ from selenium import webdriver
 import chromedriver_autoinstaller
 
 # (_ssl.c:1108) 오류로 인해 SSL 무시 Script 작성
+# https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
