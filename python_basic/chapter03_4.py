@@ -33,33 +33,4 @@ print ('>>>>>')
 print (c+d)
 print (c*3)
 
-
-f = dict(
-    name = 'niceman',
-    city = 'seoul'
-
-    )
-
-print(f)
-
-# dic 출력
-
-#print(f['name1']) # 키 존재 X - 에러발생
-print(f.get('name1')) # 키 존재 X - None으로 return
-print(f.get(0))
-
-f['address'] = 'busan'
-f['rank'] = [1,2,3]
-print(f)
-
-#dic_keys ,dic_values,dict_items
-
-print(f.keys()) #key값만 가져오는 함수
-print(list(f.keys()))
-
-print(f.values())
-print(list(f.values()))
-print(f.items())
-
-print(f.pop('name'))
-print(f)
+#튜플 함수
