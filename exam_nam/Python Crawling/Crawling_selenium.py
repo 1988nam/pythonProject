@@ -16,6 +16,3 @@ elem.send_keys('Python')
 elem.submit()
 time.sleep(2)
 driver.quit()
-
-
-http://www.11st.co.kr/products/3054281871
