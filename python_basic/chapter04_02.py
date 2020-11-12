@@ -117,3 +117,39 @@ name2 = "aceman"
 print(reversed(name2))
 print(tuple(reversed(name2)))
 print(set(reversed(name2)))
+
+
+# 임시
+
+print('start');
+
+prod_num = '2659138975'
+MoveToProductPage(prod_num)
+sleep(3)
+
+#Before 선물하기 상품상세
+
+ClickElementByXpath('선물하기 버튼', '//*[@resource-id="com.elevenst:id/btnGift"]')
+sleep(3)
+ClickElementByXpath('옵션 선택','//*[@text="화이트골드"]')
+ClickElementByXpath('선물하기 버튼', '//*[@resource-id="com.elevenst:id/btnGift"]')
+sleep(5)
+
+#주문서 Check
+
+ClickElementByXpath('문자(MMS)로 선물', '//*[@text="문자(MMS)로 선물"]')
+sleep(3)
+
+driver.find_element_by_xpath('//*[@resource-id="sendGiftReciverName_A"]').send_keys('남정현')
+driver.find_element_by_xpath('//*[@resource-id="giftConTel1_A"]').send_keys('01091022883')
+driver.find_element_by_xpath('//*[@resource-id="sendGiftSmsCont"]').send_keys('test')
+screenshot()
+
+ClickElementByXpath('선물하기 최종 결제', '//*[@resource-id="doPaySubmit"]')
+sleep(5)
+screenshot() #보안 키패드 나오고 screenshot이 안찍히는데 원인은 ?
+
+#보안키패드 관련 Script 붙여야 함
+
+print('end');
+

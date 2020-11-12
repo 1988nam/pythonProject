@@ -15,7 +15,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from appium.webdriver.common.touch_action import TouchAction
 
-# Auto Testhub 에서 고른 단말정보 등 받아와서 입력 됨 -> 이건 어떤 Library 에서 받아와서 설정 하는 것 인지 ?
+# 단말 정보를 appium json 으로 실행할 정보들임
 desired_caps = {}
 desired_caps['platformName'] = 'Android'
 desired_caps['automationName'] = 'uiautomator2'
