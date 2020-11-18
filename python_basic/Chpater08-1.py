@@ -56,5 +56,7 @@ def conv_abs(x):
 print(list(map(conv_abs, [1,-3,-2,0,-5,6])))
 print(list(map(lambda x: abs(x), [1,-3,-2,0,-5,6])))
 
+# 주석
+
 
 
