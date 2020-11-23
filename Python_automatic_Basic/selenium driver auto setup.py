@@ -13,8 +13,8 @@ chromedriver_autoinstaller.install()
                                       # then add chromedriver to path
 
 driver = webdriver.Chrome()
-driver.get("http://www.python.org")
-assert "Python" in driver.title
+driver.get("http://www.naver.org")
+
 
 # /Users/a1100291/PycharmProjects/pythonProject/venv/lib/python3.8/site-packages/chromedriver_autoinstaller/utils.py
 # 경로에서 저장 되는 위치 등 수정 가능
