@@ -32,3 +32,14 @@ p2.catch('고라파덕')
 
 p3.introduce()
 p3.catch('마자용')
+
+
+x = 1
+y = 2
+
+if x > 1:
+    print('t')
+elif x > 3:
+    print('3')
+else:
+    print('땡')
