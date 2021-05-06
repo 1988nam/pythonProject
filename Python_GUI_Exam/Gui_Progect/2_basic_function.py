@@ -1,17 +1,34 @@
 import tkinter.ttk as ttk
 from tkinter import *
+from tkinter import filedialog
 
 root = Tk()
 root.title("Nado GUI")
+
+# 파일 추가
+def add_file():
+    files = filedialog.askopenfilenames(title='이미지 파일을 선택하세요',\
+        filetypes=(('PNG 파일','*.PNG'),('모든 파일','*.*')),\
+        initialdir='c:/download')
+
+    #사용자가 선택한 파일 목록
+    for file in files:
+        list_file.insert(END, file)
+
+def del_file():
+
+    for index in reversed(list_file.curselection()):
+        list_file.delete((index))
+
 
 # 파일 프레임 (파일 추가, 선택 삭제)
 file_frame = Frame(root)
 file_frame.pack(fill='x', padx=5, pady=5)
 
-btn_add_file = Button(file_frame, padx=5, pady=5, width=12, text='파일 추가')
+btn_add_file = Button(file_frame, padx=5, pady=5, width=12, text='파일 추가', command=add_file)
 btn_add_file.pack(side='left')
 
-btn_del_file = Button(file_frame, padx=5, pady=5, width=12, text='선택 삭제')
+btn_del_file = Button(file_frame, padx=5, pady=5, width=12, text='선택 삭제', command=del_file)
 btn_del_file.pack(side='right')
 
 # 리스트 프레임
