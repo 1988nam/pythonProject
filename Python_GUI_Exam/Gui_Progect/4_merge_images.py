@@ -2,6 +2,7 @@ import tkinter.ttk as ttk
 import tkinter.messagebox as msgbox
 from tkinter import *
 from tkinter import filedialog
+from PIL import Image
 
 root = Tk()
 root.title("Nado GUI")
@@ -33,8 +34,8 @@ def browser_dest_path():
 # 이미지 통합
 
 def merge_image():
-    print(list_file.get(0,END))
-
+    #print(list_file.get(0,END))
+    images =
 
 
 # 시작
@@ -56,6 +57,9 @@ def start():
     if len(txt_dest_path.get()) == 0:
         msgbox.showwarning('경고','저장 경로를 선택하세요')
         return
+
+    #이미지 통합 작업
+    merge_image()
 
 # 파일 레임 (파일 추가, 선택 삭제)
 file_frame = Frame(root)
