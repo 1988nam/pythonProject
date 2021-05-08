@@ -1,3 +1,4 @@
+import os
 import tkinter.ttk as ttk
 import tkinter.messagebox as msgbox
 from tkinter import *
@@ -35,7 +36,26 @@ def browser_dest_path():
 
 def merge_image():
     #print(list_file.get(0,END))
-    images =
+    images = [Image.open(x) for x in list_file.get(0,END)]
+    # size = size[0] : width, size[1] : height
+    widths = [x.size[0] for x in images]
+    heights = [x.size[1] for x in images]
+
+
+    max_width, total_height = max(widths), sum(heights)
+    print(max(widths))
+    print(total_height)
+
+    #스케치북 준비
+    result_img = Image.new('RGB',(max_width, total_height),(255,255,255))
+    y_offset = 0 # y 위치 정보
+    for img in images:
+        result_img.paste(img,(0,y_offset))
+        y_offset += img.size[1]
+
+    dest_path = os.path.join(txt_dest_path.get(),'nam_photo.jpg')
+    result_img.save(dest_path)
+    msgbox.showinfo('알림','작업 완료')
 
 
 # 시작
