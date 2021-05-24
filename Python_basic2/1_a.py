@@ -1,0 +1,48 @@
+# sum=0
+# for i in range(1,11):
+#     sum+=i
+# print(sum)
+#
+# for i in range(1,10):
+#     sum = (10+1)*10/2
+# print(int(sum))
+#
+# i = 1
+# while i <=3:
+#     print(i," Hello world")
+#     i+=1
+# print("while문 종료")
+#
+# for i in range(0,3):
+#     print(i)
+#     if i ==2:
+#         break
+#
+# for i in range(1,19):
+#     if i > 5:
+#         continue
+#     print(i)
+#
+# sum2 = 0
+# for i in range(1,101,2):
+#     # if i % 2 == 0:
+#     sum2 += i
+# print(sum2)
+
+# 간단 로그인 code
+
+user_id = input('id')
+user_pwd = input('password?')
+# # print(user_input)
+# if user_pwd =='111111':
+#     print('hello master')
+# else:
+#     print('who are you?')
+
+if user_id =='nam':
+    if user_pwd =='1':
+        print('hello master')
+    else:
+        print('wrong')
+else:
+    print('who are you')
