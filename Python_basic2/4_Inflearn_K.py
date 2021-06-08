@@ -27,6 +27,7 @@ k = int(k)
 #     print("입력한 K는", k)
 
 "n 의 6의 약수 구하기"
+
 cnt=0
 for i in range(1,n+1):
     if n%i==0:
