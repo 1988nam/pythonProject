@@ -16,4 +16,4 @@ for t in range(T):
     a=list(map(int,input().split()))
     a=a[s-1:e]
     a.sort()
-    print(a[k-1])
+    print("#%d %d" %(t+1,a[k-1]))
