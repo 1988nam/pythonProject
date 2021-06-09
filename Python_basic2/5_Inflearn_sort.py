@@ -10,10 +10,15 @@
 import sys
 sys.stdin=open("input.txt","rt")
 
-T=int(input())
-for t in range(T):
-    n,s,e,k=map(int,input().split())
-    a=list(map(int,input().split()))
-    a=a[s-1:e]
-    a.sort()
-    print("#%d %d" %(t+1,a[k-1]))
+n,k=map(int,input().split())
+a=list(map(int,input().split()))
+
+res=set() # 중복을 제거 하는 자료구조
+
+for i in range(n):
+    for j in range(i+1,n):
+        for m in range(j+1,n):
+            res.add(a[i]+a[j]+a[m])
+res=list(res)
+res.sort(reverse=True)
+print(res[k-1])
