@@ -19,3 +19,5 @@ for idx, x in enumerate(a):
         if x>score:
             score = x
             res=idx+1
+
+print(ave,res)
